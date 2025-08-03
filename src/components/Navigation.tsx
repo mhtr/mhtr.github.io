@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { id: "about", label: "About" },
-  { id: "speakers", label: "Speakers" },
-  { id: "program", label: "Program" },
-  { id: "location", label: "Location" },
-  { id: "rules", label: "Rules" },
-  { id: "contacts", label: "Contacts" }
+  { id: "about", label: "О съезде" },
+  { id: "speakers", label: "Спикеры" },
+  { id: "program", label: "Программа" },
+  { id: "location", label: "Локация" },
+  { id: "rules", label: "Правила" },
+  { id: "contacts", label: "Контакты" }
 ];
 
 export function Navigation() {
@@ -51,15 +51,15 @@ export function Navigation() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-18">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
-              <span className="text-primary text-lg">✠</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <span className="text-primary text-lg"><img src="logo/logoconf-2.svg" alt="logo" class="max-w-full h-auto" /></span>
             </div>
             <div>
               <h1 className="text-lg font-medium text-primary">
-                Orthodox Conference 2025
+                X СЪЕЗД ПРАВОСЛАВНОЙ МОЛОДЕЖИ КАЗАХСТАНА
               </h1>
               <p className="text-xs text-muted-foreground">
-                Strengthening Faith • Building Community
+                много сердец - одна вера
               </p>
             </div>
           </div>

@@ -125,9 +125,9 @@ export function ProgramSection() {
                     transition={{ delay: 0.1, duration: 0.3 }}
                   >
                     <CardTitle className="text-center text-2xl text-primary flex items-center justify-center gap-3">
-                      <span className="text-primary/50">✠</span>
+                      <span className="text-primary/50">✛</span>
                       {scheduleData[activeDay as keyof typeof scheduleData].title}
-                      <span className="text-primary/50">✠</span>
+                      <span className="text-primary/50">✛</span>
                     </CardTitle>
                   </motion.div>
                 </CardHeader>
@@ -155,7 +155,7 @@ export function ProgramSection() {
                             </h4>
                             {session.speaker && (
                               <p className="text-sm text-muted-foreground mt-1">
-                                <span className="text-primary/70">✠</span> {session.speaker}
+                                <span className="text-primary/70">✛</span> {session.speaker}
                               </p>
                             )}
                           </div>

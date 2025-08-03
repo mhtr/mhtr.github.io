@@ -10,9 +10,12 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@radix-ui/react-dialog": "^1.1.6",
     "class-variance-authority": "^0.7.1",
     "clsx": "2.1.1",
     "framer-motion": "^12.23.11",
+    "lucide-react": "^0.487.0",
     "motion": "^12.23.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

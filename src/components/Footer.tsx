@@ -4,18 +4,18 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-4">
           <div>
-            <h3 className="text-lg mb-2">Orthodox Faith Conference 2025</h3>
+            <h3 className="text-lg mb-2">X СЪЕЗД ПРАВОСЛАВНОЙ МОЛОДЕЖИ КАЗАХСТАНА</h3>
             <p className="text-sm text-primary-foreground/80">
-              Strengthening Faith, Building Community, Preserving Tradition
+            Много сердец - одна вера.
             </p>
           </div>
           
           <div className="text-sm text-primary-foreground/80">
-            <p>March 15-17, 2025 • St. Nicholas Cathedral, Chicago</p>
+            <p>8-11 августа, "8 Озер", Казахстан</p>
           </div>
           
           <div className="border-t border-primary-foreground/20 pt-4 text-xs text-primary-foreground/60">
-            <p>© 2025 Orthodox Faith Conference. All rights reserved.</p>
+            <p>© 2025 Православное Молодежное Движение Казахстана. Все права защищены.</p>
           </div>
         </div>
       </div>

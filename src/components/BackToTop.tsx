@@ -32,7 +32,7 @@ export function BackToTop() {
           aria-label="Back to top"
         >
           <div className="flex flex-col items-center">
-            <span className="text-lg mb-1">✠</span>
+            <span className="text-lg mb-1">✛</span>
             <svg 
               className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform duration-300" 
               fill="none" 
