@@ -4,6 +4,7 @@ const navItems = [
   { id: "about", label: "О съезде" },
   { id: "speakers", label: "Спикеры" },
   { id: "program", label: "Программа" },
+  { id: "materials", label: "Материалы" },
   { id: "location", label: "Локация" },
   { id: "rules", label: "Правила" },
   { id: "contacts", label: "Контакты" }
@@ -119,7 +120,7 @@ export function Navigation() {
                   }`}
                 >
                   <div className="flex items-center space-x-3">
-                    <span className="text-primary/50">✠</span>
+                    <span className="text-primary/50">✛</span>
                     <span>{item.label}</span>
                   </div>
                 </button>

@@ -1,65 +1,207 @@
 import { Card, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
+import Slider from "react-slick";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 const speakers = [
   {
-    name: "Archbishop Michael Konstantinos",
-    title: "Metropolitan of the Greek Orthodox Archdiocese",
-    bio: "Leading scholar in patristic theology with over 30 years of pastoral experience.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face"
+    name: "митрополит Александр",
+    title: "предстоятель Православной Церкви Казахстана",
+    bio: "",
+    image: "photos/ma.jpg"
   },
   {
-    name: "Dr. Maria Theodoros",
-    title: "Professor of Byzantine History",
-    bio: "Renowned expert in Orthodox liturgical traditions and early church history.",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face"
+    name: "иерей Георгий Рублинский",
+    title: "председатель комиссии по делам молодежи Казахстанского митрополичьего округа",
+    bio: "",
+    image: "photos/gr.jpeg"
   },
   {
-    name: "Father John Stavros",
-    title: "Spiritual Director",
-    bio: "Devoted to Orthodox spirituality and monastic traditions with focus on prayer life.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face"
+    name: "иерей Иоанн Левинский",
+    title: "проректор по воспитательной работе Алматинской православной духовной семинарии",
+    bio: "",
+    image: "photos/il.jpg"
   },
   {
-    name: "Dr. Elena Christou",
-    title: "Theologian and Author",
-    bio: "Author of several books on Orthodox theology and contemporary Christian living.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face"
+    name: "иерей Олег Лисин",
+    title: "заведующий Библейско-богословской кафедрой Алматинской православной духовной семинарии",
+    bio: "",
+    image: "photos/ol.webp"
+  },
+  {
+    name: "диакон Евгений Есауленко",
+    title: "сотрудник Синодального отдела по делам молодёжи, ответственный за сектор взаимодействия с зарубежными епархиями",
+    bio: "",
+    image: "photos/yes.jpg"
+  },
+  {
+    name: "Серафим Сашлиев",
+    title: "автор и ведущий youtube-канала \"Серафим\"",
+    bio: "",
+    image: "photos/ss.jpg"
   }
 ];
+// Custom arrow components for the slider
+function CustomPrevArrow({ onClick }: { onClick?: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-full p-3 shadow-lg hover:bg-primary/10 transition-all duration-200 hover:scale-110"
+      aria-label="Previous speaker"
+    >
+      <ChevronLeft className="w-5 h-5 text-primary" />
+    </button>
+  );
+}
+
+function CustomNextArrow({ onClick }: { onClick?: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/90 backdrop-blur-sm border border-primary/20 rounded-full p-3 shadow-lg hover:bg-primary/10 transition-all duration-200 hover:scale-110"
+      aria-label="Next speaker"
+    >
+      <ChevronRight className="w-5 h-5 text-primary" />
+    </button>
+  );
+}
 
 export function SpeakersSection() {
+  const sliderRef = useRef<Slider>(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    pauseOnHover: true,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ],
+    customPaging: () => (
+      <div className="w-3 h-3 bg-primary/30 rounded-full transition-all duration-200 hover:bg-primary/60" />
+    ),
+    appendDots: (dots: React.ReactNode) => (
+      <div className="mt-8">
+        <ul className="flex justify-center gap-2">{dots}</ul>
+      </div>
+    )
+  };
+
   return (
     <section className="py-20 px-4 bg-muted/50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <div className="h-px bg-primary/30 flex-1 max-w-20"></div>
+            <span className="text-primary/50 mx-4">✛</span>
+            <div className="h-px bg-primary/30 flex-1 max-w-20"></div>
+          </div>
           <h2 className="text-3xl md:text-4xl mb-6 text-primary">
-            Featured Speakers
+            Спикеры
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Learn from distinguished Orthodox theologians, clergy, and scholars who will share 
-            their wisdom and insights throughout the conference.
-          </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {speakers.map((speaker, index) => (
-            <Card key={index} className="text-center">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <ImageWithFallback
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover"
-                  />
+        {/* Show slider only if more than 4 speakers */}
+        {speakers.length > 4 ? (
+          <div className="relative px-12">
+            <style>{`
+              .slick-dots li.slick-active div {
+                background-color: var(--primary) !important;
+                transform: scale(1.2);
+              }
+              .slick-track {
+                display: flex;
+                align-items: stretch;
+              }
+              .slick-slide > div {
+                height: 100%;
+              }
+              .slick-slide > div > div {
+                height: 100%;
+              }
+            `}</style>
+            <Slider ref={sliderRef} {...settings}>
+              {speakers.map((speaker, index) => (
+                <div key={index} className="px-3">
+                  <Card className="text-center h-full border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg bg-background/80 backdrop-blur-sm">
+                    <CardContent className="p-6 h-full flex flex-col">
+                      <div className="mb-4">
+                        <div className="relative inline-block">
+                          <ImageWithFallback
+                            src={speaker.image}
+                            alt={speaker.name}
+                            className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary/20"
+                          />
+                          <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span className="text-xs text-primary">✛</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex-1 flex flex-col justify-between">
+                        <div>
+                          <h3 className="text-lg mb-2 text-primary">{speaker.name}</h3>
+                          <p className="text-sm text-primary/70 mb-3 font-medium">{speaker.title}</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{speaker.bio}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-                <h3 className="text-lg mb-2">{speaker.name}</h3>
-                <p className="text-sm text-primary mb-3">{speaker.title}</p>
-                <p className="text-sm text-muted-foreground">{speaker.bio}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              ))}
+            </Slider>
+          </div>
+        ) : (
+          // Fallback to grid layout if 4 or fewer speakers
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {speakers.map((speaker, index) => (
+              <Card key={index} className="text-center border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
+                <CardContent className="p-6">
+                  <div className="mb-4">
+                    <div className="relative inline-block">
+                      <ImageWithFallback
+                        src={speaker.image}
+                        alt={speaker.name}
+                        className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-primary/20"
+                      />
+                      <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center">
+                        <span className="text-xs text-primary">✛</span>
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="text-lg mb-2 text-primary">{speaker.name}</h3>
+                  <p className="text-sm text-primary/70 mb-3 font-medium">{speaker.title}</p>
+                  <p className="text-sm text-muted-foreground">{speaker.bio}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

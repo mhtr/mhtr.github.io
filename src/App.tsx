@@ -4,6 +4,7 @@ import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { SpeakersSection } from "./components/SpeakersSection";
 import { ProgramSection } from "./components/ProgramSection";
+import { MaterialsSection } from "./components/MaterialsSection";
 import { LocationSection } from "./components/LocationSection";
 import { RulesSection } from "./components/RulesSection";
 import { ContactsSection } from "./components/ContactsSection";
@@ -22,6 +23,9 @@ export default function App() {
       </div>
       <div id="program">
         <ProgramSection />
+      </div>
+      <div id="materials">
+        <MaterialsSection />
       </div>
       <div id="location">
         <LocationSection />

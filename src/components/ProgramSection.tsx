@@ -4,38 +4,66 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 const scheduleData = {
   "day1": {
-    title: "Friday, March 15",
+    title: "Пятница, 8 августа",
     sessions: [
-      { time: "9:00 AM", title: "Registration & Welcome Coffee", speaker: "", type: "break" },
-      { time: "10:00 AM", title: "Opening Ceremony & Divine Liturgy", speaker: "Archbishop Michael", type: "main" },
-      { time: "12:00 PM", title: "Lunch Break", speaker: "", type: "break" },
-      { time: "1:30 PM", title: "The Foundations of Orthodox Faith", speaker: "Dr. Maria Theodoros", type: "session" },
-      { time: "3:00 PM", title: "Coffee Break", speaker: "", type: "break" },
-      { time: "3:30 PM", title: "Prayer and Contemplation Workshop", speaker: "Father John Stavros", type: "workshop" },
-      { time: "5:00 PM", title: "Welcome Reception", speaker: "", type: "break" }
+      { time: "13:00", title: "Заезд на локацию", speaker: "" },
+      { time: "17:15", title: "Молебен на открытие съезда", speaker: ""},
+      { time: "17:30", title: "обращение главы митрополичьего округа Русской Православной Церкви в Республике Казахстан", speaker: "митрополит Астанайский и Казахстанский Александр"},
+      { time: "18:30", title: "Ужин", speaker: "" },
+      { time: "19:30", title: "Послание председателя синодального отдела по делам молодежи преосвященного Серафима, епископа Истринского", speaker: "диакон Евгений Есауленко" },
+      { time: "19:40", title: "Вступительное слово председателя коммиссии по делам молодежи Казахстанского митрополичьего округа", speaker: "иерей Георгий Рублинский" },
+      { time: "20:00", title: "Презентация команд", speaker: "" },
+      { time: "22:00", title: "Вечерняя молитва", speaker: "" },
+      { time: "23:00", title: "Отбой", speaker: "" }
     ]
   },
   "day2": {
-    title: "Saturday, March 16",
+    title: "Суббота, 9 августа",
     sessions: [
-      { time: "9:00 AM", title: "Morning Prayer", speaker: "", type: "prayer" },
-      { time: "9:30 AM", title: "Orthodox Theology in Modern Context", speaker: "Dr. Elena Christou", type: "main" },
-      { time: "11:00 AM", title: "Coffee Break", speaker: "", type: "break" },
-      { time: "11:30 AM", title: "Panel: Living Orthodox Faith Today", speaker: "All Speakers", type: "panel" },
-      { time: "12:30 PM", title: "Lunch Break", speaker: "", type: "break" },
-      { time: "2:00 PM", title: "Byzantine Music Workshop", speaker: "Choir Director", type: "workshop" },
-      { time: "3:30 PM", title: "Icons and Spirituality", speaker: "Icon Artist", type: "session" },
-      { time: "5:00 PM", title: "Vespers Service", speaker: "", type: "prayer" }
+      { time: "8:00", title: "Подъем", speaker: "" },
+      { time: "8:30", title: "Утренняя молитва", speaker: "" },
+      { time: "9:00", title: "Завтрак", speaker: "" },
+      { time: "10:00", title: "Церковь и здравый смысл. Диалог, критика, перемены", speaker: "Серафим Сашлиев" },
+      { time: "12:00", title: "Разработка проектов молодежного служения, работа в командах", speaker: "" },
+      { time: "13:00", title: "Обед", speaker: "" },
+      { time: "14:00", title: "Мастеркласс по продвижению в социальных соцсетях", speaker: "Досаев Рафаиль" },
+      { time: "14:40", title: "Мастеркласс по мобилографии", speaker: "Елисеев Владимир" },
+      { time: "15:30", title: "Мастеркласс по храмовой флористике", speaker: "Иван Тихомиров" },
+      { time: "16:30", title: "Игротека", speaker: "" },
+      { time: "18:30", title: "Ужин", speaker: "" },
+      { time: "19:30", title: "Викторина, посвященная новомученникам и исповедникам в земле Казахстанской просиявших", speaker: "Максим Сафин" },
+      { time: "20:30", title: "Рок. Рэп. Христианство", speaker: "диакон Евгений Есауленко" },
+      { time: "21:00", title: "Вечерняя молитва, исповедь, подготовка ко Причастию", speaker: "" },
+      { time: "23:00", title: "Отбой", speaker: "" }
     ]
   },
   "day3": {
-    title: "Sunday, March 17",
+    title: "Воскресенье, 10 августа",
     sessions: [
-      { time: "9:00 AM", title: "Divine Liturgy", speaker: "Archbishop Michael", type: "prayer" },
-      { time: "11:00 AM", title: "Coffee Fellowship", speaker: "", type: "break" },
-      { time: "11:30 AM", title: "The Future of Orthodox Christianity", speaker: "Panel Discussion", type: "panel" },
-      { time: "12:30 PM", title: "Closing Remarks & Blessing", speaker: "Archbishop Michael", type: "main" },
-      { time: "1:00 PM", title: "Farewell Lunch", speaker: "", type: "break" }
+      { time: "7:30", title: "Подъем", speaker: "" },
+      { time: "8:30", title: "Выезд в храм на Божественную Литургию", speaker: "" },
+      { time: "10:00", title: "Божественная Литургия в Свято-Казанском соборе г. Алматы", speaker: "" },
+      { time: "12:00", title: "Обед", speaker: "" },
+      { time: "13:00", title: "Возвращение на локацию", speaker: "" },
+      { time: "15:00", title: "Слово о прмчч. Серафиме и Феогносте", speaker: "иерей Георгий Рублинский" },
+      { time: "16:00", title: "Беседа о христианстве в средней Азии по книге митрополита Александра", speaker: "иерей Олег Лисин" },
+      { time: "16:30", title: "Обращение проеректора семинарии", speaker: "иерей Иоанн Левинский" },
+      { time: "16:45", title: "Итоги, закрытие", speaker: "" },
+      { time: "18:00", title: "Ужин", speaker: "" },
+      { time: "19:00", title: "Кино, концерт", speaker: "" },
+      { time: "20:00", title: "Вечерняя молитва, исповедь, подготовка ко Причастию", speaker: "" },
+      { time: "21:00", title: "Отбой", speaker: "" }
+    ]
+  },
+  "day4": {
+    title: "Понедельник, 11 августа",
+    sessions: [
+      { time: "3:00", title: "Подъем, выезд", speaker: "" },
+      { time: "5:00", title: "Начало шествия к месту мученической кончины прмччю Серафима и Феогноста ", speaker: "" },
+      { time: "9:00", title: "Божественная Литургия, возглавляемая преосвященным Вениамином, епископом Талгарским", speaker: "" },
+      { time: "11:00", title: "Обед", speaker: "" },
+      { time: "12:00", title: "Начало спуска", speaker: "" },
+      { time: "14:00", title: "Прибытие в епархию", speaker: "" }
     ]
   }
 };
@@ -43,7 +71,8 @@ const scheduleData = {
 const dayLabels = {
   "day1": "Day 1",
   "day2": "Day 2", 
-  "day3": "Day 3"
+  "day3": "Day 3",
+  "day4": "Day 4"
 };
 
 export function ProgramSection() {
@@ -58,11 +87,10 @@ export function ProgramSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl mb-6 text-primary">
-            Conference Program
+            Программа съезда
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Three days of enriching sessions, workshops, and spiritual activities designed to 
-            deepen your Orthodox faith and connect with fellow believers.
+            Четыре дня интереснейших лекций, командной работы, совместной молитвы и других активностей.
           </p>
         </div>
         
@@ -75,8 +103,8 @@ export function ProgramSection() {
               layout
               initial={false}
               animate={{
-                left: activeDay === "day1" ? "0.25rem" : activeDay === "day2" ? "33.33%" : "66.67%",
-                width: "calc(33.33% - 0.25rem)"
+                left: activeDay === "day1" ? "0.25rem" : activeDay === "day2" ? "25%" : activeDay === "day3" ? "50%" : "75%",
+                width: "calc(25% - 0.25rem)"
               }}
               transition={{
                 type: "spring",
@@ -163,12 +191,12 @@ export function ProgramSection() {
                             <motion.span
                               whileHover={{ scale: 1.05 }}
                               className={`px-3 py-1 rounded-full text-xs font-medium ${
-                                session.type === 'main' ? 'bg-primary/10 text-primary border border-primary/20' :
-                                session.type === 'session' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
-                                session.type === 'workshop' ? 'bg-green-50 text-green-700 border border-green-200' :
-                                session.type === 'panel' ? 'bg-purple-50 text-purple-700 border border-purple-200' :
-                                session.type === 'prayer' ? 'bg-orange-50 text-orange-700 border border-orange-200' :
-                                'bg-muted text-muted-foreground border border-border'
+                                session.type === 'main' ? 'text-primary' :
+                                session.type === 'session' ? 'text-blue-700' :
+                                session.type === 'workshop' ? 'text-green-700' :
+                                session.type === 'panel' ? 'text-purple-700' :
+                                session.type === 'prayer' ? 'text-orange-700' :
+                                'text-muted-foreground'
                               }`}
                             >
                               {session.type === 'break' ? 'Break' : 

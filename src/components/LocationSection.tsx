@@ -13,7 +13,7 @@ export function LocationSection() {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-6">
             <div className="h-px bg-primary/30 flex-1 max-w-20"></div>
-            <span className="text-primary/50 mx-4">✠</span>
+            <span className="text-primary/50 mx-4">✛</span>
             <div className="h-px bg-primary/30 flex-1 max-w-20"></div>
           </div>
           <h2 className="text-3xl md:text-4xl mb-6 text-primary">
@@ -81,9 +81,9 @@ export function LocationSection() {
           <Card className="border-primary/20">
             <CardHeader className="bg-primary/5">
               <CardTitle className="text-center text-xl text-primary flex items-center justify-center gap-3">
-                <span className="text-primary/70">✠</span>
+                <span className="text-primary/70">✛</span>
                 Экокурорт "8 Озер".
-                <span className="text-primary/70">✠</span>
+                <span className="text-primary/70">✛</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
@@ -115,11 +115,11 @@ export function LocationSection() {
           <CardContent className="pt-6">
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-6 py-3 border border-primary/20">
-                <span className="text-primary text-lg">✠</span>
+                <span className="text-primary text-lg">✛</span>
                 <span className="font-medium text-primary">
                   Автобусы от Свято-Казанского собора города Алматы
                 </span>
-                <span className="text-primary text-lg">✠</span>
+                <span className="text-primary text-lg">✛</span>
               </div>
             </div>
 
