@@ -69,10 +69,10 @@ const scheduleData = {
 };
 
 const dayLabels = {
-  "day1": "Day 1",
-  "day2": "Day 2", 
-  "day3": "Day 3",
-  "day4": "Day 4"
+  "day1": "День 1",
+  "day2": "День 2", 
+  "day3": "День 3",
+  "day4": "День 4"
 };
 
 export function ProgramSection() {
